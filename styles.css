@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+html,
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+.hero {
+  background: url(img/dog.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.container {
+  padding: 1.5rem 0;
+  height: 100vh;
+}
+
+.site-name {
+  color: white;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  height: 100%;
+  padding-bottom: 2rem;
+}
+
+.name {
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 0 0 1rem;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 1.5rem 4rem;
+  }
+  .site-name {
+    text-align: right;
+    color: #844013;
+  }
+  .headline {
+    align-items: flex-end;
+    padding-bottom: 6rem;
+  }
+}
