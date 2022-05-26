@@ -11,7 +11,7 @@
 html,
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .hero {
@@ -26,7 +26,7 @@ body {
 
 .site-name {
   color: white;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-align: center;
 }
 
@@ -38,10 +38,6 @@ body {
   color: white;
   height: 100%;
   padding-bottom: 2rem;
-}
-
-.name {
-  letter-spacing: 1px;
 }
 
 .subtitle {
@@ -67,6 +63,11 @@ a {
 }
 
 @media (min-width: 768px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+
   .container {
     padding: 1.5rem 4rem;
   }
