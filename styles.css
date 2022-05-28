@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
 
 * {
   box-sizing: border-box;
@@ -26,6 +27,7 @@ body {
 
 .site-name {
   color: white;
+  text-shadow: 0px 0px 9px #844013;
   letter-spacing: 3px;
   text-align: center;
 }
@@ -36,6 +38,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   color: white;
+  text-shadow: 0px 0px 9px #844013;
   height: 100%;
   padding-bottom: 2rem;
 }
@@ -55,11 +58,19 @@ li {
   justify-content: space-evenly;
 }
 
-a {
+li a {
   text-decoration: none;
   color: white;
   padding: 1rem 0 0 1rem;
   letter-spacing: 1px;
+}
+
+.social {
+  padding-top: 1rem;
+}
+
+.bi-facebook {
+  padding-left: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -74,6 +85,7 @@ a {
   .site-name {
     text-align: right;
     color: #844013;
+    text-shadow: 0px 0px 9px white;
   }
   .headline {
     align-items: flex-end;
