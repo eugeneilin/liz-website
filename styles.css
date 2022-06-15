@@ -1,80 +1,217 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
 
+/* Resets */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
+  z-index: 0;
 }
 
 html,
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
+  line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
-.hero {
-  background: url(img/dog.jpeg) no-repeat center;
-  background-size: cover;
-}
-
-.container {
-  padding: 1.5rem 0;
-  height: 100vh;
-}
-
-.site-name {
-  color: white;
-  text-shadow: 0px 0px 9px #844013;
-  letter-spacing: 3px;
-  text-align: center;
-}
-
-.headline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  color: white;
-  text-shadow: 0px 0px 9px #844013;
-  height: 100%;
-  padding-bottom: 2rem;
-}
-
-.subtitle {
-  letter-spacing: 2px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 ul {
   list-style: none;
+}
+
+/* Colors */
+:root {
+  --first-color: #e0e2db;
+  --second-color: #d2d4c8;
+  --third-color: #b8bdb5;
+  --fourth-color: #889696;
+  --fifth-color: #5f7470;
+}
+
+/* Header */
+.showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/camera.jpeg) no-repeat center center / cover;
+  z-index: -1;
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.container {
+  padding: 2rem;
+  height: 100vh;
+}
+
+/* Menu */
+.menu-wrap {
+  position: fixed;
+  top: 0.6rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.toggler {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  z-index: 2;
+  cursor: pointer;
+  width: 6rem;
+  height: 6rem;
+  opacity: 0;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
   display: flex;
+  align-items: center;
+}
+
+.menu-btn > div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: var(--first-color);
+  transition: all 0.5s ease;
+}
+
+.menu-btn > div:before,
+.menu-btn > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-btn > div:after {
+  top: 10px;
+}
+
+.toggler:checked + .menu-btn > div {
+  transform: rotate(135deg);
+}
+
+.toggler:checked + .menu-btn > div:before,
+.toggler:checked + .menu-btn > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.toggler:checked:hover + .menu-btn > div {
+  transform: rotate(225deg);
+}
+
+/* Menu Overlay */
+.mobile-menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-li {
+.menu-overlay {
+  background: rgba(95, 116, 112, 0.8);
+  border-radius: 50%;
+  width: 100rem;
+  height: 100rem;
   display: flex;
-  justify-content: space-evenly;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
 }
 
-li a {
-  text-decoration: none;
-  color: white;
-  padding: 1rem 0 0 1rem;
-  letter-spacing: 1px;
+.links-wrap {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: var(--first-color);
 }
 
-.social {
-  padding-top: 1rem;
+.links-wrap li {
+  font-size: 1.5rem;
+  padding: 2rem 5rem;
 }
 
-.bi-facebook {
-  padding-left: 1rem;
+.toggler:checked ~ .mobile-menu {
+  visibility: visible;
 }
 
+.toggler:checked ~ .mobile-menu .menu-overlay {
+  transform: scale(1);
+  transition-duration: 0.6s;
+}
+
+.toggler:checked ~ .mobile-menu .menu-overlay .links-wrap {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 9px black;
+  height: 100%;
+}
+
+.content > * {
+  padding: 0.7rem;
+}
+
+.photographer {
+  background: url(img/photographer.jpeg) no-repeat center center / cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--second-color);
+}
+
+.content > p {
+  text-align: center;
+}
+
+.bi {
+  padding: 1.5rem;
+}
+
+/* Media Queries */
 @media (min-width: 768px) {
-  html,
+  /* html,
   body {
     font-size: 20px;
   }
@@ -84,11 +221,10 @@ li a {
   }
   .site-name {
     text-align: right;
-    color: #844013;
-    text-shadow: 0px 0px 9px white;
+    text-shadow: 0px 0px 9px black;
   }
   .headline {
     align-items: flex-end;
     padding-bottom: 6rem;
-  }
+  } */
 }
