@@ -10,39 +10,46 @@
   <body>
     <!-- Home Page -->
     <header id="home" class="showcase">
+      <div class="nav-bar" id="nav-bar">
+        <a href="#" onclick="closeMenu()"
+          ><h3 class="site-name">photowithliz.com</h3></a
+        >
+        <input
+          type="checkbox"
+          class="toggler"
+          id="toggler"
+          onclick="togglerFunc()"
+        />
+        <div class="menu-btn"><div></div></div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="menu-overlay" id="menu-overlay">
+          <ul class="links-wrap" id="links-wrap">
+            <a onclick="closeMenu()" href="#home"><li>Home</li></a>
+            <a onclick="closeMenu()" href="#about"> <li>About</li> </a>
+            <a onclick="closeMenu()" href="#gallery"><li>Gallery</li></a>
+            <a onclick="closeMenu()" href="#contact"><li>Contact</li></a>
+          </ul>
+        </div>
+      </div>
+      <!-- Desktop menu -->
+      <!-- <ul class="desktop-menu"> 
+    <li>
+          <a href="#home">Home</a>
+        </li>
+    <li>
+      <a href="#portfolio">Portfolio</a>
+    </li>
+    <li>
+      <a href="#about">About</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul> -->
       <div class="container">
-        <a class="site-name" href="#"><h3>photowithliz.com</h3></a>
-        <!-- Mobile menu -->
-        <nav class="menu-wrap">
-          <input type="checkbox" class="toggler" />
-          <div class="menu-btn"><div></div></div>
-          <div class="mobile-menu">
-            <div class="menu-overlay">
-              <ul class="links-wrap">
-                <a href="#home"><li>Home</li></a>
-                <a href="#about"> <li>About</li> </a>
-                <a href="#gallery"> <li>Gallery</li> </a>
-                <a href="#contact"><li>Contact</li></a>
-              </ul>
-            </div>
-          </div>
-          <!-- Desktop menu -->
-          <!-- <ul class="desktop-menu"> 
-            <li>
-                  <a href="#home">Home</a>
-                </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul> -->
-        </nav>
-        <!--  -->
+        <!-- Content -->
         <main class="content">
           <div class="photographer"></div>
           <h1>Liz Voloshenko</h1>
@@ -67,6 +74,13 @@
     <section id="about">
       <div class="container">
         <h1>About</h1>
+        <h3>Testing code</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+          dolorem in? Quod, quae, necessitatibus dolorum a odio ratione et
+          magnam similique ipsum distinctio reiciendis quo quos modi ab
+          cupiditate eum earum consectetur nesciunt doloremque.
+        </p>
         <h3>Testing code</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
@@ -104,5 +118,20 @@
         </p>
       </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <h3>This is a placeholder footer.</h3>
+        <p>Hope you find it useful.</p>
+        <div class="info">
+          <div>(123) 456-7890</div>
+          <div>chat@photowithliz.com</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
   </body>
 </html>
