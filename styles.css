@@ -284,15 +284,12 @@ section {
 }
 
 .portrait {
-  background: url(img/photographer.jpeg) no-repeat center center / cover;
-  width: 10rem;
-  height: 10rem;
+  background: url(img/liz.jpg) no-repeat center center / cover;
+  width: 20rem;
+  height: 15rem;
   border-radius: 50%;
-  float: right;
-  margin-left: 0.8rem;
+  margin: 0 auto;
 }
-
-/* --------- Gallery Section --------- */
 
 /* --------- Testimonies Section --------- */
 
