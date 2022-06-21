@@ -10,9 +10,10 @@
   <body>
     <!-- Home Page -->
     <header id="home" class="showcase">
+      <!-- Nav Bar -->
       <div class="nav-bar" id="nav-bar">
         <a href="#" onclick="closeMenu()"
-          ><h3 class="site-name">photowithliz.com</h3></a
+          ><h3 class="site-name">Liz Voloshenko Photography</h3></a
         >
         <input
           type="checkbox"
@@ -22,42 +23,11 @@
         />
         <div class="menu-btn"><div></div></div>
       </div>
-      <!-- Mobile menu -->
-      <div class="mobile-menu" id="mobile-menu">
-        <div class="menu-overlay" id="menu-overlay">
-          <ul class="links-wrap" id="links-wrap">
-            <a onclick="closeMenu()" href="#home"><li>Home</li></a>
-            <a onclick="closeMenu()" href="#about"> <li>About</li> </a>
-            <a onclick="closeMenu()" href="#gallery"><li>Gallery</li></a>
-            <a onclick="closeMenu()" href="#contact"><li>Contact</li></a>
-          </ul>
-        </div>
-      </div>
-      <!-- Desktop menu -->
-      <!-- <ul class="desktop-menu"> 
-    <li>
-          <a href="#home">Home</a>
-        </li>
-    <li>
-      <a href="#portfolio">Portfolio</a>
-    </li>
-    <li>
-      <a href="#about">About</a>
-    </li>
-    <li>
-      <a href="#contact">Contact</a>
-    </li>
-  </ul> -->
+      <!-- Content -->
       <div class="container">
-        <!-- Content -->
         <main class="content">
-          <div class="photographer"></div>
-          <h1>Liz Voloshenko</h1>
-          <h3>Photographer in Charlotte, NC</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            perferendis. Itaque molestiae provident cumque rerum.
-          </p>
+          <h1 class="headline">family photographer</h1>
+          <h3 class="info">Serving Charlotte, NC</h3>
           <div class="social">
             <a href="#"
               ><i class="bi bi-facebook" style="font-size: 1.5rem"></i
@@ -68,20 +38,66 @@
           </div>
         </main>
       </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="menu-overlay" id="menu-overlay">
+          <ul class="links-wrap" id="links-wrap">
+            <a onclick="closeMenu()" href="#home"><li>Home</li></a>
+            <a onclick="closeMenu()" href="#services"><li>Services</li></a>
+            <a onclick="closeMenu()" href="#about"> <li>About</li> </a>
+            <a onclick="closeMenu()" href="#gallery"><li>Gallery</li></a>
+            <a onclick="closeMenu()" href="#contact"><li>Contact</li></a>
+          </ul>
+        </div>
+      </div>
     </header>
 
-    <!-- About Section-->
-    <section id="about">
+    <!-- Services Section -->
+    <section id="services">
       <div class="container">
-        <h1>About</h1>
-        <h3>Testing code</h3>
+        <h1 class="heading">Specializing in</h1>
+        <div class="services-list">
+          <div class="service">
+            <div class="service-img service-img-1">
+              <p class="service-description">maternity</p>
+            </div>
+          </div>
+          <div class="service">
+            <div class="service-img service-img-2">
+              <p class="service-description">newborn</p>
+            </div>
+          </div>
+          <div class="service">
+            <div class="service-img service-img-3">
+              <p class="service-description">family</p>
+            </div>
+          </div>
+        </div>
+        <h2 class="heading">Gallery</h2>
+      </div>
+    </section>
+
+    <!-- About Section-->
+    <section id="about" class="bg-color">
+      <div class="container">
+        <aside class="portrait"></aside>
+        <h1 class="heading">Let's Meet!</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-          dolorem in? Quod, quae, necessitatibus dolorum a odio ratione et
-          magnam similique ipsum distinctio reiciendis quo quos modi ab
-          cupiditate eum earum consectetur nesciunt doloremque.
+          A photograph is the pause button of life. I didn't choose photography;
+          it chose me.
         </p>
-        <h3>Testing code</h3>
+        <p>
+          Here is another great sample paragraph! Hic velit fuga alias
+          necessitatibus laborum repudiandae magni totam unde inventore, omnis,
+          rerum doloribus. What you don't get know, you will understand later.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Section-->
+    <section id="gallery">
+      <div class="container">
+        <h1 class="heading">Gallery</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
           dolorem in? Quod, quae, necessitatibus dolorum a odio ratione et
@@ -91,11 +107,10 @@
       </div>
     </section>
 
-    <!-- Gallery Section-->
-    <section id="gallery">
+    <!-- Testimonies Section-->
+    <section id="testimonies">
       <div class="container">
-        <h1>Gallery</h1>
-        <h3>Testing code</h3>
+        <h1 class="heading">Testimonies</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
           dolorem in? Quod, quae, necessitatibus dolorum a odio ratione et
@@ -108,8 +123,7 @@
     <!-- Contact Section-->
     <section id="contact">
       <div class="container">
-        <h1>Contact</h1>
-        <h3>Testing code</h3>
+        <h1 class="heading">Contact</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
           dolorem in? Quod, quae, necessitatibus dolorum a odio ratione et
@@ -124,7 +138,7 @@
       <div class="container">
         <h3>This is a placeholder footer.</h3>
         <p>Hope you find it useful.</p>
-        <div class="info">
+        <div class="footer-info">
           <div>(123) 456-7890</div>
           <div>chat@photowithliz.com</div>
         </div>

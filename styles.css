@@ -1,9 +1,9 @@
 /* import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 /* import Bootstrap icons */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
 
-/* Resets */
+/* Resets and Utilities */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,7 +15,7 @@
 
 html,
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'EB Garamond', sans-serif;
   line-height: 1.4;
   scroll-behavior: smooth;
 }
@@ -26,12 +26,33 @@ a {
 }
 
 a:hover {
-  color: var(--test-color-1);
+  color: var(--second-color);
   transition: color 0.4s ease;
 }
 
 ul {
   list-style: none;
+}
+
+.bg-color {
+  background-color: var(--first-color);
+}
+
+.container {
+  padding: 2rem;
+  position: relative;
+  height: 100%;
+}
+
+.heading {
+  color: var(--fifth-color);
+  font-style: italic;
+  padding-bottom: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.heading + p {
+  padding-bottom: 0.8rem;
 }
 
 /* Colors */
@@ -46,7 +67,7 @@ ul {
 
 /* --------- Header Section --------- */
 header {
-  height: 100vh;
+  height: 85vh;
 }
 
 .showcase::before {
@@ -55,30 +76,27 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: url(img/camera.jpeg) no-repeat center center / cover;
+  height: 85vh;
+  background: url(img/hero.jpeg) no-repeat center center / cover;
   z-index: -1;
 }
 
 .showcase {
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(transparent, transparent, rgba(18, 32, 8, 0.8));
   color: white;
 }
 
-.container {
-  padding: 2rem;
-}
-
-/* Menu */
+/* Nav Bar */
 .nav-bar {
   position: fixed;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   z-index: 2;
   transition: all 0.4s ease;
+  background-color: rgba(136, 150, 150, 0.3);
 }
 
 .toggler {
@@ -87,14 +105,14 @@ header {
   right: 0;
   z-index: 5;
   cursor: pointer;
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   opacity: 0;
 }
 
 .menu-btn {
   z-index: 1;
-  width: 2rem;
+  width: 1.8rem;
   display: flex;
   align-items: center;
 }
@@ -112,14 +130,14 @@ header {
   content: '';
   position: absolute;
   z-index: 1;
-  top: -10px;
+  top: -8px;
   width: 100%;
   height: 2px;
   background: inherit;
 }
 
 .menu-btn > div:after {
-  top: 10px;
+  top: 8px;
 }
 
 .toggler:checked + .menu-btn > div {
@@ -138,10 +156,39 @@ header {
 
 .toggler:hover + .menu-btn > div,
 .toggler:checked:hover + .menu-btn > div {
-  background-color: var(--test-color-1);
+  background-color: var(--first-color);
 }
 
-/* Menu Overlay */
+/* Content */
+.content {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.site-name {
+  text-transform: uppercase;
+}
+
+.headline {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.info {
+  font-weight: normal;
+  padding: 0.8rem 0;
+  letter-spacing: 2px;
+}
+
+.bi {
+  padding: 1rem;
+}
+
+/* Mobile Menu */
 .mobile-menu {
   visibility: hidden;
   position: fixed;
@@ -185,97 +232,105 @@ header {
   background: rgba(95, 116, 112, 0.8);
 }
 
-/* .toggler:checked ~ .mobile-menu {
-  visibility: visible;
-}
-
-.toggler:checked ~ .mobile-menu .menu-overlay {
-  transform: scale(1);
-  transition-duration: 0.6s;
-}
-
-.toggler:checked ~ .mobile-menu .menu-overlay .links-wrap {
-  opacity: 1;
-  transition: opacity 0.9s ease;
-} */
-
-/* Content */
-.content {
+/* --------- Services Section --------- */
+.services-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0px 0px 9px black;
-  height: 100vh;
 }
 
-.content > * {
-  padding: 0.8rem;
+.service {
+  position: relative;
+  padding-bottom: 2rem;
 }
 
-.photographer {
-  background: url(img/photographer.jpeg) no-repeat center center / cover;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 0.7rem;
-  border-radius: 50%;
-  border: 3px solid var(--test-color-1);
+.service-img {
+  height: 80%;
+  width: 100%;
 }
 
-.photographer:hover {
-  transform: scale(1.04);
-  transition: all 0.4s ease;
+.service-img-1 {
+  background: url(img/portrait.jpg) no-repeat center center / cover;
+}
+.service-img-2 {
+  background: url(img/camera.jpeg) no-repeat center center / cover;
+}
+.service-img-3 {
+  background: url(img/hero.jpeg) no-repeat center center / cover;
 }
 
-.content > p {
+.service-description {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10rem 0 0.8rem;
+  color: white;
+  width: 100%;
   text-align: center;
+  background: linear-gradient(
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    rgba(136, 150, 150, 0.7)
+  );
 }
 
-.bi {
-  padding: 1.5rem;
+#services h2 {
+  text-align: center;
 }
 
 /* --------- About Section --------- */
 section {
-  height: 100vh;
+  border-bottom: dashed 1px var(--first-color);
+}
+
+.portrait {
+  background: url(img/photographer.jpeg) no-repeat center center / cover;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  float: right;
+  margin-left: 0.8rem;
 }
 
 /* --------- Gallery Section --------- */
+
+/* --------- Testimonies Section --------- */
 
 /* --------- Contact Section --------- */
 
 /* --------- Footer Section --------- */
 footer {
   color: white;
-  background-color: var(--fourth-color);
+  background-color: var(--fifth-color);
   text-align: center;
 }
 
-.info {
+.footer-info {
   display: flex;
   justify-content: space-evenly;
 }
 
-.info > div {
+.footer-info > div {
   padding: 1rem;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
-  /* html,
-  body {
-    font-size: 20px;
-  }
+/* ----- Media Queries ----- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
 
-  .container {
-    padding: 1.5rem 4rem;
-  }
-  .site-name {
-    text-align: right;
-    text-shadow: 0px 0px 9px black;
-  }
-  .headline {
-    align-items: flex-end;
-    padding-bottom: 6rem;
-  } */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
