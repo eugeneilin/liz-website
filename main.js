@@ -30,8 +30,8 @@ window.onscroll = function navbarBackground() {
     document.body.scrollTop > 300 ||
     document.documentElement.scrollTop > 300
   ) {
-    navBar.style.backgroundColor = 'rgba(95, 116, 112, 0.7)';
-    navBar.style.boxShadow = '0 0 .5em rgba(18, 32, 8, .6)';
+    navBar.style.backgroundColor = 'rgba(136, 150, 150, .7)';
+    navBar.style.boxShadow = '0 0 .5em rgba(18, 32, 8, .4)';
   } else {
     navBar.style.backgroundColor = '';
     navBar.style.boxShadow = '';
