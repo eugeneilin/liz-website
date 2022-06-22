@@ -1,0 +1,41 @@
+/* Heading */
+.gallery-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  background: url(img/liz.jpg);
+  z-index: -1;
+}
+
+.gallery-header {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 8rem;
+  box-shadow: 0 1px rgba(18, 32, 8, 0.4);
+  margin-bottom: 0.2rem;
+}
+
+.gallery-headline {
+  padding-top: 2rem;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 1px 1px 1px var(--fifth-color);
+}
+
+/* Gallery */
+.gallery {
+  line-height: 0;
+  column-count: 2;
+  column-gap: 0.2rem;
+  width: 100%;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.2rem;
+}

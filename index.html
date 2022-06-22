@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>photowithliz.com</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <!-- Home Page -->
@@ -26,15 +26,11 @@
       <!-- Content -->
       <div class="container">
         <main class="content">
-          <h1 class="headline">family photographer</h1>
+          <h1 class="headline">Family Photographer</h1>
           <h3 class="info">Serving Charlotte, NC</h3>
           <div class="social">
-            <a href="#"
-              ><i class="bi bi-facebook" style="font-size: 1.5rem"></i
-            ></a>
-            <a href="#"
-              ><i class="bi bi-instagram" style="font-size: 1.5rem"></i
-            ></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
           </div>
         </main>
       </div>
@@ -44,8 +40,11 @@
           <ul class="links-wrap" id="links-wrap">
             <a onclick="closeMenu()" href="#home"><li>Home</li></a>
             <a onclick="closeMenu()" href="#services"><li>Services</li></a>
-            <a onclick="closeMenu()" href="#about"> <li>About</li> </a>
-            <a onclick="closeMenu()" href="#gallery"><li>Gallery</li></a>
+            <a onclick="closeMenu()" href="gallery.html"><li>Gallery</li></a>
+            <a onclick="closeMenu()" href="#about"><li>About</li></a>
+            <a onclick="closeMenu()" href="#testimonies"
+              ><li>Testimonies</li></a
+            >
             <a onclick="closeMenu()" href="#contact"><li>Contact</li></a>
           </ul>
         </div>
@@ -55,7 +54,7 @@
     <!-- Services Section -->
     <section id="services">
       <div class="container">
-        <h1 class="heading">Specializing in</h1>
+        <h1 class="heading">Specializing in...</h1>
         <div class="services-list">
           <div class="service">
             <div class="service-img service-img-1">
@@ -73,15 +72,21 @@
             </div>
           </div>
         </div>
-        <h2 class="heading">Gallery</h2>
+        <a href="/liz-website/gallery.html" class="heading gallery-btn"
+          ><h2>View Gallery</h2></a
+        >
       </div>
     </section>
 
     <!-- About Section-->
     <section id="about" class="bg-color">
       <div class="container">
-        <aside class="portrait"></aside>
+        <div class="portrait"></div>
+        <p class="pc">
+          PC: <a href="https://www.noelhendersonphoto.com/">Noel Henderson</a>
+        </p>
         <h1 class="heading">Let's Meet!</h1>
+
         <p>
           A photograph is the pause button of life. I didn't choose photography;
           it chose me.
@@ -89,7 +94,7 @@
         <p>
           Here is another great sample paragraph! Hic velit fuga alias
           necessitatibus laborum repudiandae magni totam unde inventore, omnis,
-          rerum doloribus. What you don't get know, you will understand later.
+          rerum doloribus. What you don't get now, you will understand later.
         </p>
       </div>
     </section>
@@ -123,11 +128,11 @@
     <!-- Footer Section -->
     <footer>
       <div class="container">
-        <h3>This is a placeholder footer.</h3>
-        <p>Hope you find it useful.</p>
-        <div class="footer-info">
-          <div>(123) 456-7890</div>
-          <div>chat@photowithliz.com</div>
+        <h3><a href="#">lizvoloshenkophoto.com</a></h3>
+        <p class="info">Charlotte, NC</p>
+        <div>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
     </footer>
