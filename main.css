@@ -1,0 +1,345 @@
+/* import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+/* import Bootstrap icons */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
+
+/* Resets and Utilities */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  z-index: 0;
+}
+
+html,
+body {
+  font-family: 'EB Garamond', sans-serif;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--first-color);
+  transition: color 0.4s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.bg-color {
+  background-color: var(--first-color);
+}
+
+.container {
+  padding: 2rem;
+  position: relative;
+  height: 100%;
+}
+
+.heading {
+  color: var(--fifth-color);
+  font-style: italic;
+  padding-bottom: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.heading + p {
+  padding-bottom: 0.8rem;
+}
+
+section {
+  border-bottom: dashed 1px var(--first-color);
+}
+
+/* Colors */
+:root {
+  --first-color: #e0e2db;
+  --second-color: #d2d4c8;
+  --third-color: #b8bdb5;
+  --fourth-color: #889696;
+  --fifth-color: #5f7470;
+  --test-color-1: #ddc650;
+}
+
+/* --------- Header Section --------- */
+header {
+  height: 85vh;
+}
+
+.showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 85vh;
+  background: url(img/hero.jpeg) no-repeat center center / cover;
+  z-index: -1;
+}
+
+.showcase {
+  background: linear-gradient(transparent, transparent, rgba(18, 32, 8, 0.8));
+  color: white;
+}
+
+/* Nav Bar */
+.nav-bar {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 2;
+  background-color: rgba(136, 150, 150, 0.3);
+  transition: all 0.5s ease;
+  top: 0;
+}
+
+.site-name {
+  text-transform: uppercase;
+}
+
+.site-name:hover {
+  text-shadow: 1px 0px 1px var(--fifth-color);
+}
+
+.toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0;
+}
+
+.menu-btn {
+  z-index: 1;
+  width: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn > div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.menu-btn > div:before,
+.menu-btn > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -8px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-btn > div:after {
+  top: 8px;
+}
+
+.toggler:checked + .menu-btn > div {
+  transform: rotate(135deg);
+}
+
+.toggler:checked + .menu-btn > div:before,
+.toggler:checked + .menu-btn > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.toggler:checked:hover + .menu-btn > div {
+  transform: rotate(225deg);
+}
+
+.toggler:hover + .menu-btn > div,
+.toggler:checked:hover + .menu-btn > div {
+  background-color: var(--first-color);
+}
+
+/* Content */
+.content {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.headline {
+  font-style: italic;
+  text-shadow: 1px 1px 3px var(--fifth-color);
+}
+
+.info {
+  font-weight: normal;
+  padding: 0.8rem 0;
+  letter-spacing: 2px;
+}
+
+.bi {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.menu-overlay {
+  background: rgba(95, 116, 112, 0.9);
+  border-radius: 50%;
+  width: 100rem;
+  height: 100rem;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.links-wrap {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: white;
+}
+
+.links-wrap li {
+  font-size: 1.5rem;
+  padding: 2rem 6rem;
+}
+
+.links-wrap li:active {
+  background: rgba(95, 116, 112, 0.8);
+}
+
+/* --------- Services Section --------- */
+.services-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.service-img {
+  height: 80%;
+  width: 100%;
+}
+
+.service-img-1 {
+  background: url(img/portrait.jpg) no-repeat center center / cover;
+}
+.service-img-2 {
+  background: url(img/camera.jpeg) no-repeat center center / cover;
+}
+.service-img-3 {
+  background: url(img/hero.jpeg) no-repeat center center / cover;
+}
+
+.service-description {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10rem 0 0.8rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    rgba(136, 150, 150, 0.7)
+  );
+}
+
+.gallery-btn {
+  text-align: center;
+}
+
+/* --------- About Section --------- */
+.portrait {
+  background: url(img/liz.jpg) no-repeat center center / cover;
+  width: 20rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.pc {
+  text-align: center;
+  color: var(--third-color);
+}
+
+.pc a:hover {
+  color: var(--fourth-color);
+}
+
+/* --------- Testimonies Section --------- */
+
+/* --------- Contact Section --------- */
+
+/* --------- Footer Section --------- */
+footer {
+  color: white;
+  background-color: var(--fifth-color);
+  text-align: center;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ----- Media Queries ----- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

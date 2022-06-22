@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <header class="gallery-header">
+      <!-- Nav Bar -->
+      <div class="nav-bar" id="gallery-nav-bar">
+        <a href="index.html" onclick="closeMenu()"
+          ><h3 class="site-name">Liz Voloshenko Photography</h3></a
+        >
+        <input
+          type="checkbox"
+          class="toggler"
+          id="toggler"
+          onclick="togglerFunc()"
+        />
+        <div class="menu-btn"><div></div></div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="menu-overlay" id="menu-overlay">
+          <ul class="links-wrap" id="links-wrap">
+            <a onclick="closeMenu()" href="index.html"><li>Home</li></a>
+            <a onclick="closeMenu()" href="index.html#services"
+              ><li>Services</li></a
+            >
+            <a onclick="closeMenu()" href="#"><li>Gallery</li></a>
+            <a onclick="closeMenu()" href="index.html#about"><li>About</li> </a
+            ><a onclick="closeMenu()" href="index.html#testimonies"
+              ><li>Testimonies</li></a
+            >
+            <a onclick="closeMenu()" href="index.html#contact"
+              ><li>Contact</li></a
+            >
+          </ul>
+        </div>
+      </div>
+      <!-- Header -->
+      <div class="container">
+        <h1 class="gallery-headline">Gallery</h1>
+      </div>
+    </header>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <img src="img/alvaro-reyes-3Cigxs7xEkM-unsplash.jpg" alt="" />
+      <img src="img/ben-white-4K2lIP0zc_k-unsplash.jpg" alt="" />
+      <img src="img/ben-white-EMZxDosijJ4-unsplash.jpg" alt="" />
+      <img src="img/bonnie-kittle--f7bKsvOgwU-unsplash.jpg" alt="" />
+      <img src="img/caleb-jones-rpPvrOQmR2s-unsplash.jpg" alt="" />
+      <img src="img/camera.jpeg" alt="" />
+      <img src="img/caroline-hernandez-tJHU4mGSLz4-unsplash.jpg" alt="" />
+      <img src="img/conner-baker-M5Zix_4Jc4k-unsplash.jpg" alt="" />
+      <img src="img/gus-moretta-BCyfpZE3aVE-unsplash.jpg" alt="" />
+      <img src="img/hero.jpeg" alt="" />
+      <img src="img/james-wheeler-RRZM3cwS1DU-unsplash.jpg" alt="" />
+      <img src="img/kelli-mcclintock-wBgAVAGjzFg-unsplash.jpg" alt="" />
+      <img src="img/limor-zellermayer-Z0_d54l_nyw-unsplash.jpg" alt="" />
+      <img src="img/liz.jpg" alt="" />
+      <img src="img/nathan-dumlao-bhPJ7-AdgFE-unsplash.jpg" alt="" />
+      <img src="img/patricia-prudente-6UyWK8mDcWo-unsplash.jpg" alt="" />
+      <img src="img/patty-brito-eHOZjZEx7u8-unsplash.jpg" alt="" />
+      <img src="img/photographer.jpeg" alt="" />
+      <img src="img/portrait.jpg" alt="" />
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <h3><a href="index.html">lizvoloshenkophoto.com</a></h3>
+        <p class="info">Charlotte, NC</p>
+        <div>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>
