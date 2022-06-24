@@ -31,8 +31,8 @@ function closeMenu() {
 // Add background and shadow to navbar when user scrolls
 function navBgAndShad() {
   if (
-    document.body.scrollTop > 400 ||
-    document.documentElement.scrollTop > 400
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
   ) {
     navBar.style.backgroundColor = 'rgba(136, 150, 150, .7)';
     navBar.style.boxShadow = '0 0 .5em rgba(18, 32, 8, .4)';
@@ -45,8 +45,8 @@ function navBgAndShad() {
 // hide and show nav-bar based on scrolling
 function hideAndShowNav() {
   if (
-    document.body.scrollTop > 700 ||
-    document.documentElement.scrollTop > 700
+    document.body.scrollTop > 550 ||
+    document.documentElement.scrollTop > 550
   ) {
     window.onscroll = function () {
       if (this.oldScroll < this.scrollY) {
@@ -55,14 +55,14 @@ function hideAndShowNav() {
         navBar.style.top = '0';
       }
       this.oldScroll = this.scrollY;
-      if (this.oldScroll <= 400) {
+      if (this.oldScroll <= 200) {
         navBar.style.backgroundColor = '';
         navBar.style.boxShadow = '';
       } else {
         navBar.style.backgroundColor = 'rgba(136, 150, 150, .7)';
         navBar.style.boxShadow = '0 0 .5em rgba(18, 32, 8, .4)';
       }
-      if (this.oldScroll <= 700) {
+      if (this.oldScroll <= 550) {
         navBar.style.top = '0';
       }
     };
