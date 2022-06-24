@@ -9,7 +9,8 @@
   </head>
   <body>
     <!-- Home Page -->
-    <header id="home" class="showcase">
+    <header id="home">
+      <div class="showcase"></div>
       <!-- Nav Bar -->
       <div class="nav-bar" id="nav-bar">
         <a href="#" onclick="closeMenu()"
@@ -28,7 +29,7 @@
         <main class="content">
           <h1 class="headline">Family Photographer</h1>
           <h3 class="info">Serving Charlotte, NC</h3>
-          <div class="social">
+          <div>
             <a href="#"><i class="bi bi-facebook"></i></a>
             <a href="#"><i class="bi bi-instagram"></i></a>
           </div>
@@ -103,12 +104,26 @@
     <section id="testimonies">
       <div class="container">
         <h1 class="heading">Testimonies</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-          dolorem in? Quod, quae, necessitatibus dolorum a odio ratione et
-          magnam similique ipsum distinctio reiciendis quo quos modi ab
-          cupiditate eum earum consectetur nesciunt doloremque.
-        </p>
+        <div class="rev-carousel">
+          <div class="cards">
+            <div class="card">
+              <div class="rev-img" id="img-1"></div>
+              <div class="rev-name">Jane Doe</div>
+              <div class="rev">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequuntur, ea!
+              </div>
+            </div>
+            <div class="card">
+              <div class="rev-img" id="img-2"></div>
+              <div class="rev-name">Jane Doe</div>
+              <div class="rev">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequuntur, ea!
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
