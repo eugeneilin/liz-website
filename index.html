@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>photowithliz.com</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="media-queries.css" />
   </head>
   <body>
     <!-- Home Page -->
@@ -14,7 +15,7 @@
       <!-- Nav Bar -->
       <div class="nav-bar" id="nav-bar">
         <a href="#" onclick="closeMenu()"
-          ><h3 class="site-name">Liz Voloshenko Photography</h3></a
+          ><h3 class="site-name">photo with liz</h3></a
         >
         <input
           type="checkbox"
@@ -25,16 +26,15 @@
         <div class="menu-btn"><div></div></div>
       </div>
       <!-- Content -->
-      <div class="container">
-        <main class="content">
-          <h1 class="headline">Family Photographer</h1>
-          <h3 class="info">Serving Charlotte, NC</h3>
-          <div>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-          </div>
-        </main>
-      </div>
+      <main class="content">
+        <h1 class="headline">Family Photographer</h1>
+        <h3 class="info">Serving Charlotte, NC</h3>
+        <div>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </main>
+
       <!-- Mobile menu -->
       <div class="mobile-menu" id="mobile-menu">
         <div class="menu-overlay" id="menu-overlay">
@@ -43,8 +43,8 @@
             <a onclick="closeMenu()" href="#services"><li>Services</li></a>
             <a onclick="closeMenu()" href="gallery.html"><li>Gallery</li></a>
             <a onclick="closeMenu()" href="#about"><li>About</li></a>
-            <a onclick="closeMenu()" href="#testimonies"
-              ><li>Testimonies</li></a
+            <a onclick="closeMenu()" href="#testimonials"
+              ><li>Testimonials</li></a
             >
             <a onclick="closeMenu()" href="#contact"><li>Contact</li></a>
           </ul>
@@ -73,8 +73,8 @@
             </div>
           </div>
         </div>
-        <a href="/liz-website/gallery.html" class="heading gallery-btn"
-          ><h2>View Gallery</h2></a
+        <a href="/liz-website/gallery.html"
+          ><p class="gallery-btn">View Gallery</p></a
         >
       </div>
     </section>
@@ -100,28 +100,32 @@
       </div>
     </section>
 
-    <!-- Testimonies Section-->
-    <section id="testimonies">
+    <!-- Testimonials Section-->
+    <section id="testimonials">
       <div class="container">
-        <h1 class="heading">Testimonies</h1>
-        <div class="rev-carousel">
-          <div class="cards">
-            <div class="card">
-              <div class="rev-img" id="img-1"></div>
-              <div class="rev-name">Jane Doe</div>
-              <div class="rev">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequuntur, ea!
-              </div>
-            </div>
-            <div class="card">
-              <div class="rev-img" id="img-2"></div>
-              <div class="rev-name">Jane Doe</div>
-              <div class="rev">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequuntur, ea!
-              </div>
-            </div>
+        <h1 class="heading">Testimonials</h1>
+        <div class="testimonial">
+          <div class="test-img" id="test-img-1"></div>
+          <p>Jane Doe</p>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur, ea!
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="test-img" id="test-img-2"></div>
+          <p>Sarah Smith</p>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur, ea!
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="test-img" id="test-img-3"></div>
+          <p>Tracy Johnson</p>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur, ea!
           </div>
         </div>
       </div>
@@ -131,12 +135,24 @@
     <section id="contact" class="bg-color">
       <div class="container">
         <h1 class="heading">Contact</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-          dolorem in? Quod, quae, necessitatibus dolorum a odio ratione et
-          magnam similique ipsum distinctio reiciendis quo quos modi ab
-          cupiditate eum earum consectetur nesciunt doloremque.
-        </p>
+        <form id="form" action="#">
+          <p>Please fill out this form to book a photoshoot.</p>
+          <p>We will be in touch with you soon!</p>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" required></textarea>
+          </div>
+          <button type="submit" class="contact-btn" id="submit">Submit</button>
+        </form>
+        <div class="thank-you" id="thank-you">Thank You!</div>
       </div>
     </section>
 

@@ -74,3 +74,22 @@ window.onscroll = () => {
   navBgAndShad();
   hideAndShowNav();
 };
+
+// Listen for form submit
+document.getElementById('form').addEventListener('submit', submitForm);
+
+// Submit form
+function submitForm(e) {
+  e.preventDefault();
+
+  // Show Thank You
+  document.getElementById('form').style.display = 'none';
+  document.getElementById('thank-you').style.display = 'block';
+
+  // Show form after 7 seconds
+  setTimeout(function () {
+    document.getElementById('thank-you').style.display = 'none';
+    document.getElementById('form').reset();
+    document.getElementById('form').style.display = 'block';
+  }, 7000);
+}
