@@ -14,17 +14,39 @@
       <div class="showcase"></div>
       <!-- Nav Bar -->
       <div class="nav-bar" id="nav-bar">
-        <a href="#" onclick="closeMenu()"
-          ><h3 class="site-name">photo with liz</h3></a
-        >
-        <input
-          type="checkbox"
-          class="toggler"
-          id="toggler"
-          onclick="togglerFunc()"
-        />
+        <a href="#" onclick="closeMenu()"><h3 class="site-name">photo with liz</h3></a>
+
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu" id="desktop-menu">
+          <ul class="dt-menu-links-wrap" id="dt-menu-links-wrap">
+            <a href="#home"><li>Home</li></a>
+            <a href="#services"><li>Services</li></a>
+            <a href="gallery.html"><li>Gallery</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#testimonials"><li>Testimonials</li></a>
+            <a href="#contact"><li>Contact</li></a>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <input type="checkbox" class="toggler" id="toggler" onclick="togglerFunc()" />
         <div class="menu-btn"><div></div></div>
       </div>
+
+      <!-- Mobile menu -->
+      <nav class="mobile-menu" id="mobile-menu">
+        <div class="mb-menu-overlay" id="mb-menu-overlay">
+          <ul class="mb-menu-links-wrap" id="mb-menu-links-wrap">
+            <a onclick="closeMenu()" href="#home"><li>Home</li></a>
+            <a onclick="closeMenu()" href="#services"><li>Services</li></a>
+            <a onclick="closeMenu()" href="gallery.html"><li>Gallery</li></a>
+            <a onclick="closeMenu()" href="#about"><li>About</li></a>
+            <a onclick="closeMenu()" href="#testimonials"><li>Testimonials</li></a>
+            <a onclick="closeMenu()" href="#contact"><li>Contact</li></a>
+          </ul>
+        </div>
+      </nav>
+
       <!-- Content -->
       <main>
         <div class="content">
@@ -36,22 +58,6 @@
           </div>
         </div>
       </main>
-
-      <!-- Mobile menu -->
-      <div class="mobile-menu" id="mobile-menu">
-        <div class="menu-overlay" id="menu-overlay">
-          <ul class="links-wrap" id="links-wrap">
-            <a onclick="closeMenu()" href="#home"><li>Home</li></a>
-            <a onclick="closeMenu()" href="#services"><li>Services</li></a>
-            <a onclick="closeMenu()" href="gallery.html"><li>Gallery</li></a>
-            <a onclick="closeMenu()" href="#about"><li>About</li></a>
-            <a onclick="closeMenu()" href="#testimonials"
-              ><li>Testimonials</li></a
-            >
-            <a onclick="closeMenu()" href="#contact"><li>Contact</li></a>
-          </ul>
-        </div>
-      </div>
     </header>
 
     <!-- Services Section -->
@@ -82,21 +88,19 @@
     <!-- About Section-->
     <section id="about" class="bg-color">
       <div class="container">
-        <div class="portrait"></div>
-        <p class="pc">
-          PC: <a href="https://www.noelhendersonphoto.com/">Noel Henderson</a>
-        </p>
+        <div class="portrait">
+          <span class="pc"
+            >PC: <a href="https://www.noelhendersonphoto.com/">Noel Henderson</a></span
+          >
+        </div>
         <h1 class="heading">Let's Meet!</h1>
-
+        <p>A photograph is the pause button of life. I didn't choose photography; it chose me.</p>
         <p>
-          A photograph is the pause button of life. I didn't choose photography;
-          it chose me.
+          Here is another great sample paragraph! Hic velit fuga alias necessitatibus laborum
+          repudiandae magni totam unde inventore, omnis, rerum doloribus. What you don't get now,
+          you will understand later.
         </p>
-        <p>
-          Here is another great sample paragraph! Hic velit fuga alias
-          necessitatibus laborum repudiandae magni totam unde inventore, omnis,
-          rerum doloribus. What you don't get now, you will understand later.
-        </p>
+        <div></div>
       </div>
     </section>
 
@@ -104,28 +108,30 @@
     <section id="testimonials">
       <div class="container">
         <h1 class="heading">Testimonials</h1>
-        <div class="testimonial">
-          <div class="test-img" id="test-img-1"></div>
-          <p>Jane Doe</p>
-          <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur, ea!
+        <div class="testimonials">
+          <div class="testimonial">
+            <div class="test-img" id="test-img-1"></div>
+            <p>Jane Doe</p>
+            <div>
+              This is an awesome photographer. We enjoyed the entire time. We would definitely
+              recommend Liz's services! Lorem ipsum dolor sit amet.
+            </div>
           </div>
-        </div>
-        <div class="testimonial">
-          <div class="test-img" id="test-img-2"></div>
-          <p>Sarah Smith</p>
-          <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur, ea!
+          <div class="testimonial">
+            <div class="test-img" id="test-img-2"></div>
+            <p>Sarah Smith</p>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat necessitatibus officia
+              possimus placeat repellat quidem nihil veritatis pariatur, error et.
+            </div>
           </div>
-        </div>
-        <div class="testimonial">
-          <div class="test-img" id="test-img-3"></div>
-          <p>Tracy Johnson</p>
-          <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequuntur, ea!
+          <div class="testimonial">
+            <div class="test-img" id="test-img-3"></div>
+            <p>Tracy Johnson</p>
+            <div>
+              This is another awesome review. Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Animi doloremque quibusdam, deserunt cum quod expedita?
+            </div>
           </div>
         </div>
       </div>
@@ -138,19 +144,30 @@
         <form id="form" action="#">
           <p>Please fill out this form to book a photoshoot.</p>
           <p>We will be in touch with you soon!</p>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" name="name" required />
+          <div class="combined">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" placeholder="First and last name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Best email address to contact you"
+                required
+              />
+            </div>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" required />
+            <label for="message">What you are looking for</label>
+            <textarea
+              name="message"
+              placeholder="Give us as many details as you can"
+              required
+            ></textarea>
           </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea name="message" required></textarea>
-          </div>
-          <button type="submit" class="contact-btn" id="submit">Submit</button>
+          <button type="submit" class="submit-btn" id="submit">Submit</button>
         </form>
         <div class="thank-you" id="thank-you">Thank You!</div>
       </div>

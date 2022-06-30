@@ -12,37 +12,39 @@
   <body>
     <header class="gallery-header">
       <!-- Nav Bar -->
-      <div class="nav-bar" id="gallery-nav-bar">
-        <a href="index.html" onclick="closeMenu()"
-          ><h3 class="site-name">photo with liz</h3></a
-        >
-        <input
-          type="checkbox"
-          class="toggler"
-          id="toggler"
-          onclick="togglerFunc()"
-        />
+      <div class="nav-bar" id="nav-bar">
+        <a href="index.html" onclick="closeMenu()"><h3 class="site-name">photo with liz</h3></a>
+
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu" id="desktop-menu">
+          <ul class="dt-menu-links-wrap" id="dt-menu-links-wrap">
+            <a href="index.html#home"><li>Home</li></a>
+            <a href="index.html#services"><li>Services</li></a>
+            <a href="#"><li>Gallery</li></a>
+            <a href="index.html#about"><li>About</li></a>
+            <a href="index.html#testimonials"><li>Testimonials</li></a>
+            <a href="index.html#contact"><li>Contact</li></a>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <input type="checkbox" class="toggler" id="toggler" onclick="togglerFunc()" />
         <div class="menu-btn"><div></div></div>
       </div>
+
       <!-- Mobile menu -->
-      <div class="mobile-menu" id="mobile-menu">
-        <div class="menu-overlay" id="menu-overlay">
-          <ul class="links-wrap" id="links-wrap">
-            <a onclick="closeMenu()" href="index.html"><li>Home</li></a>
-            <a onclick="closeMenu()" href="index.html#services"
-              ><li>Services</li></a
-            >
+      <nav class="mobile-menu" id="mobile-menu">
+        <div class="mb-menu-overlay" id="mb-menu-overlay">
+          <ul class="mb-menu-links-wrap" id="mb-menu-links-wrap">
+            <a onclick="closeMenu()" href="index.html#home"><li>Home</li></a>
+            <a onclick="closeMenu()" href="index.html#services"><li>Services</li></a>
             <a onclick="closeMenu()" href="#"><li>Gallery</li></a>
-            <a onclick="closeMenu()" href="index.html#about"><li>About</li> </a
-            ><a onclick="closeMenu()" href="index.html#testimonials"
-              ><li>Testimonials</li></a
-            >
-            <a onclick="closeMenu()" href="index.html#contact"
-              ><li>Contact</li></a
-            >
+            <a onclick="closeMenu()" href="index.html#about"><li>About</li></a>
+            <a onclick="closeMenu()" href="index.html#testimonials"><li>Testimonials</li></a>
+            <a onclick="closeMenu()" href="index.html#contact"><li>Contact</li></a>
           </ul>
         </div>
-      </div>
+      </nav>
       <!-- Header -->
       <div class="container">
         <h1 class="gallery-headline">Gallery</h1>
@@ -51,7 +53,6 @@
 
     <!-- Gallery -->
     <div class="gallery">
-      <img src="img/alvaro-reyes-3Cigxs7xEkM-unsplash.jpg" alt="" />
       <img src="img/ben-white-4K2lIP0zc_k-unsplash.jpg" alt="" />
       <img src="img/ben-white-EMZxDosijJ4-unsplash.jpg" alt="" />
       <img src="img/bonnie-kittle--f7bKsvOgwU-unsplash.jpg" alt="" />
@@ -61,6 +62,7 @@
       <img src="img/conner-baker-M5Zix_4Jc4k-unsplash.jpg" alt="" />
       <img src="img/gus-moretta-BCyfpZE3aVE-unsplash.jpg" alt="" />
       <img src="img/hero.jpeg" alt="" />
+      <img src="img/portrait.jpg" alt="" />
       <img src="img/james-wheeler-RRZM3cwS1DU-unsplash.jpg" alt="" />
       <img src="img/kelli-mcclintock-wBgAVAGjzFg-unsplash.jpg" alt="" />
       <img src="img/limor-zellermayer-Z0_d54l_nyw-unsplash.jpg" alt="" />
@@ -69,7 +71,6 @@
       <img src="img/patricia-prudente-6UyWK8mDcWo-unsplash.jpg" alt="" />
       <img src="img/patty-brito-eHOZjZEx7u8-unsplash.jpg" alt="" />
       <img src="img/photographer.jpeg" alt="" />
-      <img src="img/portrait.jpg" alt="" />
     </div>
 
     <!-- Footer Section -->
@@ -84,6 +85,6 @@
       </div>
     </footer>
 
-    <script src="gallery.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
