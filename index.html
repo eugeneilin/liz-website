@@ -143,13 +143,18 @@
         <h1 class="heading">Contact</h1>
         <form
           id="form"
-          method="POST"
           name="contact"
+          method="POST"
           action="/liz-website/index.html#contact"
-          netlify
+          netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
+          data-netlify="true"
         >
           <p>Please fill out this form to book a photoshoot.</p>
-          <p>We will be in touch with you soon!</p>
+          <p class="padding">We will be in touch with you soon!</p>
+          <p class="hidden">
+            <label> Don't fill this out if you're human: <input name="bot-field" /> </label>
+          </p>
           <div class="combined">
             <div class="form-group">
               <label for="name">Your Name</label>
@@ -173,6 +178,7 @@
               required
             ></textarea>
           </div>
+          <div data-netlify-recaptcha="true"></div>
           <button type="submit" class="submit-btn" id="submit">Submit</button>
         </form>
         <div class="thank-you" id="thank-you">Thank You!</div>
