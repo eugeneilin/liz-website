@@ -69,11 +69,10 @@ window.onscroll = () => {
   hideAndShowNav();
 };
 
-// Listen for form submit
-document.getElementById('form').addEventListener('submit', submitForm);
-
 // Submit form
-function submitForm() {
+function submitForm(e) {
+  e.preventDefault();
+
   // Show Thank You
   document.getElementById('form').style.display = 'none';
   document.getElementById('thank-you').style.display = 'block';
