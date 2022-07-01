@@ -76,7 +76,7 @@ function handleForm() {
   // Show Thank You
   form.style.display = 'none';
   document.getElementById('thank-you').style.display = 'block';
-  form.reset();
+  // form.reset();
 
   // // Show form after 7 seconds
   // setTimeout(function () {
