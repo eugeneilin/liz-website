@@ -74,7 +74,7 @@ document.getElementById('form').addEventListener('submit', submitForm);
 
 // Submit form
 function submitForm(e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   // Show Thank You
   document.getElementById('form').style.display = 'none';
