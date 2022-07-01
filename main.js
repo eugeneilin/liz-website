@@ -70,17 +70,19 @@ window.onscroll = () => {
 };
 
 // Submit form
-function submitForm(e) {
-  e.preventDefault();
+const form = document.querySelector(form);
 
+function handleForm() {
   // Show Thank You
-  document.getElementById('form').style.display = 'none';
+  form.style.display = 'none';
   document.getElementById('thank-you').style.display = 'block';
+  form.reset();
 
-  // Show form after 7 seconds
-  setTimeout(function () {
-    document.getElementById('thank-you').style.display = 'none';
-    document.getElementById('form').reset();
-    document.getElementById('form').style.display = 'block';
-  }, 7000);
+  // // Show form after 7 seconds
+  // setTimeout(function () {
+  //   document.getElementById('thank-you').style.display = 'none';
+  //   form.style.display = 'block';
+  // }, 7000);
 }
+
+form.addEventListener('submit', handleForm);
