@@ -73,9 +73,7 @@ window.onscroll = () => {
 document.getElementById('form').addEventListener('submit', submitForm);
 
 // Submit form
-function submitForm(e) {
-  // e.preventDefault();
-
+function submitForm() {
   // Show Thank You
   document.getElementById('form').style.display = 'none';
   document.getElementById('thank-you').style.display = 'block';
