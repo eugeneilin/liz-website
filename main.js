@@ -41,25 +41,27 @@ function navBgAndShad() {
 
 // hide and show nav-bar based on scrolling
 function hideAndShowNav() {
-  if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
-    window.onscroll = function () {
-      if (this.oldScroll < this.scrollY) {
-        navBar.style.top = '-15%';
-      } else {
-        navBar.style.top = '0';
-      }
-      this.oldScroll = this.scrollY;
-      if (this.oldScroll <= 200) {
-        navBar.style.backgroundColor = '';
-        navBar.style.boxShadow = '';
-      } else {
-        navBar.style.backgroundColor = 'rgba(136, 150, 150, .8)';
-        navBar.style.boxShadow = '0 0 .5em rgba(18, 32, 8, .4)';
-      }
-      if (this.oldScroll <= 550) {
-        navBar.style.top = '0';
-      }
-    };
+  if (window.innerWidth < 992) {
+    if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
+      window.onscroll = function () {
+        if (this.oldScroll < this.scrollY) {
+          navBar.style.top = '-15%';
+        } else {
+          navBar.style.top = '0';
+        }
+        this.oldScroll = this.scrollY;
+        if (this.oldScroll <= 200) {
+          navBar.style.backgroundColor = '';
+          navBar.style.boxShadow = '';
+        } else {
+          navBar.style.backgroundColor = 'rgba(136, 150, 150, .8)';
+          navBar.style.boxShadow = '0 0 .5em rgba(18, 32, 8, .4)';
+        }
+        if (this.oldScroll <= 550) {
+          navBar.style.top = '0';
+        }
+      };
+    }
   }
 }
 

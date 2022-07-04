@@ -60,6 +60,13 @@ ul {
   display: none;
 }
 
+.anchor {
+  display: block;
+  height: 3.5rem;
+  margin-top: -3.5rem;
+  visibility: hidden;
+}
+
 /* Colors */
 :root {
   --first-color: #e0e2db;
