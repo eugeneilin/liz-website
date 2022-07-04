@@ -121,12 +121,12 @@
     margin-right: 1rem;
   }
 
-  #about .container div:last-child {
+  #about-section .container div:last-child {
     clear: both;
   }
 
   /* Testimonials */
-  #testimonials {
+  #testimonials-section {
     clear: both;
   }
 
