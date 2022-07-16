@@ -159,13 +159,13 @@
           <p class="hidden">
             <label> Don't fill this out if you're human: <input name="bot-field" /> </label>
           </p>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" name="name" placeholder="First and last name" required />
+          </div>
           <div class="combined">
             <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" name="name" placeholder="First and last name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email">Your email</label>
               <input
                 type="email"
                 name="email"
@@ -173,12 +173,29 @@
                 required
               />
             </div>
+            <div class="form-group">
+              <label for="phone">Your phone number</label>
+              <input
+                type="number"
+                name="phone"
+                placeholder="Best phone number to reach you"
+                required
+              />
+            </div>
           </div>
           <div class="form-group">
-            <label for="message">What you are looking for</label>
+            <label for="type">Photoshoot desired</label>
+            <select name="type">
+              <option value="maternity">Maternity</option>
+              <option value="newborn">Newborn</option>
+              <option value="family">Family</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Additional details</label>
             <textarea
               name="message"
-              placeholder="Give us as many details as you can"
+              placeholder="Please give us as many details as you can"
               required
             ></textarea>
           </div>
@@ -192,7 +209,7 @@
     <!-- Footer Section -->
     <footer>
       <div class="container">
-        <h3><a href="#">lizvoloshenkophoto.com</a></h3>
+        <h3><a href="#">photowithliz.com</a></h3>
         <p class="info">Charlotte, NC</p>
         <div>
           <a href="#"><i class="bi bi-facebook"></i></a>
